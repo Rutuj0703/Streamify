@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Main Chat Channel */
+.str-chat__channel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #c9e8c9, #b7e7bb);
+  height: 100%;
+}
+
+/* Chat Container */
+.str-chat__container {
+  max-width: 1200px;
+  width: 100%;
+  height: 80% !important;
+  margin: 0 auto !important;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+/* Chat List */
+.str-chat__list {
+  background-color: #ffffff;
+  padding: 12px;
+}
+
+/* Hide List Notifications */
+.str-chat__list-notifications {
+  display: none;
+}
+
+/* Input Field Styling */
+.str-chat__message-input {
+  border-top: 1px solid #ddd;
+}
+
+/* ------------------------------- */
+/* ✅ Mobile Responsive Styling */
+/* ------------------------------- */
+
+@media (max-width: 640px) {
+  /* Fullscreen thread view on mobile */
+  .str-chat__thread {
+    position: fixed !important;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 50; /* on top of other content */
+    width: 100% !important;
+    height: 100vh !important;
+    border-left: none !important;
+    border-radius: 0 !important;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .str-chat__thread-header,
+  .str-chat__thread-list,
+  .str-chat__thread-input {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .str-chat__thread-list {
+    flex: 1;
+    overflow-y: auto;
+  }
+
+  /* Make main chat container use full height */
+  .str-chat__container {
+    height: 100% !important;
+    border-radius: 0 !important;
+  }
+}
