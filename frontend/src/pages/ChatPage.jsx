@@ -85,9 +85,17 @@ const ChatPage = () => {
         <Channel channel={channel}>
           <div className="relative flex flex-col w-full h-full overflow-hidden">
 
-            {/* Floating Call Button (visible on all screens) */}
-            <div className="absolute top-2 right-2 z-10">
-              <CallButton handleVideoCall={handleVideoCall} />
+            {/* Call Button - Positioned within chat area */}
+            <div className="absolute z-50 
+              top-16 right-6 
+              sm:top-6 sm:right-6 
+              lg:top-1 lg:right-6">
+              <div className="
+
+                transition-all duration-200 
+                hover:scale-105">
+                <CallButton handleVideoCall={handleVideoCall} />
+              </div>
             </div>
 
             {/* Chat Window */}
